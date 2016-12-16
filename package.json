@@ -1,0 +1,33 @@
+{
+  "name": "tasks",
+  "version": "1.0.0",
+  "description": "Like native JavaScript promises, this library is designed to work with a large number of chained asynchronous requests involved with business rules and data return in a simple way.",
+  "main": "dist/tasks.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lordazzi/tasks.git"
+  },
+  "keywords": [
+    "chained",
+    "chainable",
+    "asynchronous",
+    "promises",
+    "multiple",
+    "task",
+    "tasks",
+    "js",
+    "ts",
+    "typescript",
+    "javascript",
+    "simple"
+  ],
+  "author": "Ricardo Azzi Silva <ricardoazzi91@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lordazzi/tasks/issues"
+  },
+  "homepage": "https://github.com/lordazzi/tasks#readme"
+}

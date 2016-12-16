@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tasks example</title>
+
+		<script src="../dist/tasks.min.js" type="text/javascript"></script>
+		<script type="text/javascript">
+			var tarefas = new Tasks.Task(function(yes, no){
+				 setTimeout(function(){
+					yes('love potatoes');
+				 }, 1000);
+			}).then(function(yes, no, anything){
+				 console.info(anything);
+				 setTimeout(function(){
+					yes(anything + ' and bacon');
+				 }, 1000);
+			}).then(function(yes, no, anything){
+				 console.info(anything);
+				 setTimeout(function(){
+					throw "error message";
+				 }, 1000);
+			});
+			
+			//  see that the next task will be bind to the first one generated,
+			//  but this will not change the execution order, internally this
+			//  new task will be created as the last task son
+			tarefas.then(function(yes, no, anything){
+
+				 // this one never will be executed because the last task is
+				 // lauching an exception so, the catch will be activated 
+				 console.info(anything);
+				 setTimeout(function(){
+					yes(anything + ' and onion rings');
+				 }, 1000);
+			}).catch(function(err){
+				 console.error(err.message);
+			});
+		</script>
+	</head>
+	<body>
+		See browser console
+	</body>
+</html>
