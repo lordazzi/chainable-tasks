@@ -1,0 +1,13 @@
+TODO
+
+1.1.0
+ - trocar o nome pra promise
+ - criar um finally
+ - garantir algum resultado de uma instância sem argumentos
+ - complementar com 'porques' na documentação: mostrar exemplo do angular, como é feito, tentar fazer igual com o código nativo, mostrar o problema com alertas que exigem callback, regras de negócio do serviço. Usar exemplo de busca de endereço por CEP
+ - publicar no NPM
+ - problema de não conseguir retornar os dados e o then simultaneamente no promise nativo
+ - problema que o then retorna uma ves o resolve e reject e depois passa a retornar o que foi retornado na requisição anterior
+
+1.2.0
+ - vincular com response de loading de quantos % já foram carregados (criar um objeto novo para isso, o Loading, ele precisa ter a capacidade de se vincular com um promise, ele precisa emitir eventos de start, end e loading)
