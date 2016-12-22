@@ -65,7 +65,7 @@ export namespace Tasks {
          * Aqui serão vinculadas todas as funções que devem ser vinculadas
          * quando a requisição for concluida
          */
-        private childCry: Array<ChildCallback> = new Array<ChildCallback>();
+        private childCry: ChildCallback = null;
 
         public constructor(args: ThenCallback|TaskArgument) {
             if (args instanceof TaskArgument) {
@@ -145,12 +145,10 @@ export namespace Tasks {
         }
 
         public then(callback: ThenCallback): Task {
-            let noviceTask: Task    = this;
-            let baby                = new Task(new TaskArgument(this, callback));
+            let noviceTask: Task    = this;    
 
             if (!this.child)
-                return this.child = baby;
-
+                return this.child = new Task(new TaskArgument(this, callback));
 
             while (noviceTask.getChild())
                 noviceTask = noviceTask.getChild();
@@ -163,11 +161,15 @@ export namespace Tasks {
         }
 
         public onComplete(call: ChildCallback): void {
-            this.childCry.push(call);
+            if (this.childCry)
+                throw new Error('This task already has a callback from his children');
+
+            this.childCry = call;
         }
 
         private complete() {
-            this.childCry.forEach(callback => callback(this.data, this.err));
+            if (this.childCry)
+                this.childCry(this.data, this.err);
         }
     }
 }
