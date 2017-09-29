@@ -1,5 +1,5 @@
 {
-  "name": "tasks",
+  "name": "chainable-tasks",
   "version": "1.0.2",
   "description": "Like native JavaScript promises, this library is designed to work with a large number of chained asynchronous requests involved with business rules and data return in a simple way.",
   "main": "dist/index.min.js",
