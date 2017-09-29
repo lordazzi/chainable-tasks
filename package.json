@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lordazzi/tasks.git"
+    "url": "git+https://github.com/lordazzi/chainable-tasks.git"
   },
   "keywords": [
     "chained",
@@ -27,9 +27,9 @@
   "author": "Ricardo Azzi Silva <ricardoazzi91@hotmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lordazzi/tasks/issues"
+    "url": "https://github.com/lordazzi/chainable-tasks/issues"
   },
-  "homepage": "https://github.com/lordazzi/tasks#readme",
+  "homepage": "https://github.com/lordazzi/chainable-tasks#readme",
   "devDependencies": {
     "typescript": "2.5.3"
   }
