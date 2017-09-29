@@ -1,0 +1,1 @@
+export type TaskChildCallback = (data: any, err: Error) => void;

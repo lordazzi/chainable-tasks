@@ -1,0 +1,14 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "strictNullChecks": false,
+        "experimentalDecorators": true,
+        "module": "amd",
+        "moduleResolution": "classic",
+        "outDir": "../dist/",
+        "sourceMap": false,
+        "target": "es5"
+    }
+}
