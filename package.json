@@ -1,10 +1,10 @@
 {
   "name": "tasks",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Like native JavaScript promises, this library is designed to work with a large number of chained asynchronous requests involved with business rules and data return in a simple way.",
-  "main": "dist/tasks.min.js",
+  "main": "dist/index.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc --project src -pretty"
   },
   "repository": {
     "type": "git",
@@ -29,5 +29,8 @@
   "bugs": {
     "url": "https://github.com/lordazzi/tasks/issues"
   },
-  "homepage": "https://github.com/lordazzi/tasks#readme"
+  "homepage": "https://github.com/lordazzi/tasks#readme",
+  "devDependencies": {
+    "typescript": "2.5.3"
+  }
 }
